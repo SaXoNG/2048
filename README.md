@@ -94,7 +94,3 @@ npm run lint:js
 npm run lint:css
 
 🎮 Enjoy The Game!!!
-
-```
-
-```
