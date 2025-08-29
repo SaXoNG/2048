@@ -42,11 +42,8 @@ _(You can add a screenshot or gif of your game here)_
 
 ## ⚙️ Installation & Setup
 
----
-
-## ⚙️ Installation & Setup
-
-```bash
+```
+bash
 # 1. Clone the repository
 git clone https://github.com/SaXoNG/2048.git
 cd 2048
@@ -59,6 +56,7 @@ npm start
 
 # 4. Build for production
 npm run build
+```
 
 🎮 How to Play
 
@@ -95,6 +93,8 @@ Run linters:
 npm run lint:js
 npm run lint:css
 
-
 🎮 Enjoy The Game!!!
+
+```
+
 ```
