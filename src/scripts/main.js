@@ -1,5 +1,7 @@
 'use strict';
 
+window.keyframeNames = window.keyframeNames || [];
+
 function boardRefresh() {
   const cells = game.getState().flat();
 
@@ -58,8 +60,8 @@ clickButton.addEventListener('click', () => {
       const rule = styleSheet.cssRules[i];
 
       if (
-        rule.type === CSSRule.KEYFRAMES_RULE &&
-        window.keyframeNames.includes(rule.name)
+        rule.type === CSSRule.KEYFRAMES_RULE
+        && window.keyframeNames.includes(rule.name)
       ) {
         styleSheet.deleteRule(i);
       }
@@ -109,7 +111,8 @@ document.addEventListener('keydown', (e) => {
         const rot = (i % 2 === 0 ? 2 : -2) * (i % 4 < 2 ? 1 : -1);
         const tx = (i % 2 === 0 ? 2 : -2) * (i % 4 < 2 ? 1 : -1);
 
-        keyframes += `${i}% { transform: rotate(${rot}deg) translateX(${tx}px) scale(1); }`;
+        keyframes += `${i}% { transform: rotate(${rot}deg)
+        translateX(${tx}px) scale(1); }`;
       }
 
       const randX = (Math.random() - 0.5) * 1000;
@@ -118,7 +121,8 @@ document.addEventListener('keydown', (e) => {
 
       keyframes += `
         80% { transform: rotate(0deg) translate(0,0); opacity: 1 }
-        100% { transform: rotate(${rotEnd}deg) translate(${randX}px, ${randY}px); opacity: 0;}
+        100% { transform: rotate(${rotEnd}deg) translate(${randX}px,
+        ${randY}px); opacity: 0;}
       `;
 
       keyframes += `}`;
@@ -152,8 +156,8 @@ document.addEventListener('keydown', (e) => {
         const rule = styleSheet.cssRules[i];
 
         if (
-          rule.type === CSSRule.KEYFRAMES_RULE &&
-          window.keyframeNames.includes(rule.name)
+          rule.type === CSSRule.KEYFRAMES_RULE
+          && window.keyframeNames.includes(rule.name)
         ) {
           styleSheet.deleteRule(i);
         }

@@ -1,8 +1,8 @@
 'use strict';
 class Game {
   constructor(initialState) {
-    this.board =
-      initialState || Array.from({ length: 4 }, () => Array(4).fill(0));
+    this.board
+      = initialState || Array.from({ length: 4 }, () => Array(4).fill(0));
     this.score = 0;
     this.status = 'idle';
   }
@@ -32,8 +32,8 @@ class Game {
             this.setScore(this.score + stateAfterMove[i][j]);
           }
         } else if (
-          stateAfterMove[i][j] === stateAfterMove[i][j + 2] &&
-          stateAfterMove[i][j + 1] === 0
+          stateAfterMove[i][j] === stateAfterMove[i][j + 2]
+          && stateAfterMove[i][j + 1] === 0
         ) {
           stateAfterMove[i][j] = 2 * stateAfterMove[i][j];
           stateAfterMove[i][j + 2] = 0;
@@ -42,9 +42,9 @@ class Game {
             this.setScore(this.score + stateAfterMove[i][j]);
           }
         } else if (
-          stateAfterMove[i][j] === stateAfterMove[i][j + 3] &&
-          stateAfterMove[i][j + 1] === 0 &&
-          stateAfterMove[i][j + 2] === 0
+          stateAfterMove[i][j] === stateAfterMove[i][j + 3]
+          && stateAfterMove[i][j + 1] === 0
+          && stateAfterMove[i][j + 2] === 0
         ) {
           stateAfterMove[i][j] = 2 * stateAfterMove[i][j];
           stateAfterMove[i][j + 3] = 0;
@@ -103,8 +103,8 @@ class Game {
             this.setScore(this.score + stateAfterMove[i][j]);
           }
         } else if (
-          stateAfterMove[i][j] === stateAfterMove[i][j - 2] &&
-          stateAfterMove[i][j - 1] === 0
+          stateAfterMove[i][j] === stateAfterMove[i][j - 2]
+          && stateAfterMove[i][j - 1] === 0
         ) {
           stateAfterMove[i][j] = 2 * stateAfterMove[i][j];
           stateAfterMove[i][j - 2] = 0;
@@ -113,9 +113,9 @@ class Game {
             this.setScore(this.score + stateAfterMove[i][j]);
           }
         } else if (
-          stateAfterMove[i][j] === stateAfterMove[i][j - 3] &&
-          stateAfterMove[i][j - 1] === 0 &&
-          stateAfterMove[i][j - 2] === 0
+          stateAfterMove[i][j] === stateAfterMove[i][j - 3]
+          && stateAfterMove[i][j - 1] === 0
+          && stateAfterMove[i][j - 2] === 0
         ) {
           stateAfterMove[i][j] = 2 * stateAfterMove[i][j];
           stateAfterMove[i][j - 3] = 0;
@@ -156,31 +156,31 @@ class Game {
     for (let i = 0; i < stateAfterMove.length; i++) {
       for (let j = 0; j < stateAfterMove.length; j++) {
         if (
-          j < stateAfterMove.length - 1 &&
-          stateAfterMove[j][i] === 0 &&
-          stateAfterMove[j + 1][i] > 0
+          j < stateAfterMove.length - 1
+          && stateAfterMove[j][i] === 0
+          && stateAfterMove[j + 1][i] > 0
         ) {
           stateAfterMove[j][i] = stateAfterMove[j + 1][i];
           stateAfterMove[j + 1][i] = 0;
         } else if (
-          j < stateAfterMove.length - 2 &&
-          stateAfterMove[j][i] === 0 &&
-          stateAfterMove[j + 2][i] > 0
+          j < stateAfterMove.length - 2
+          && stateAfterMove[j][i] === 0
+          && stateAfterMove[j + 2][i] > 0
         ) {
           stateAfterMove[j][i] = stateAfterMove[j + 2][i];
           stateAfterMove[j + 2][i] = 0;
         } else if (
-          j < stateAfterMove.length - 3 &&
-          stateAfterMove[j][i] === 0 &&
-          stateAfterMove[j + 3][i] > 0
+          j < stateAfterMove.length - 3
+          && stateAfterMove[j][i] === 0
+          && stateAfterMove[j + 3][i] > 0
         ) {
           stateAfterMove[j][i] = stateAfterMove[j + 3][i];
           stateAfterMove[j + 3][i] = 0;
         }
 
         if (
-          j < stateAfterMove.length - 1 &&
-          stateAfterMove[j][i] === stateAfterMove[j + 1][i]
+          j < stateAfterMove.length - 1
+          && stateAfterMove[j][i] === stateAfterMove[j + 1][i]
         ) {
           stateAfterMove[j][i] = 2 * stateAfterMove[j][i];
           stateAfterMove[j + 1][i] = 0;
@@ -189,9 +189,9 @@ class Game {
             this.setScore(this.score + stateAfterMove[j][i]);
           }
         } else if (
-          j < stateAfterMove.length - 2 &&
-          stateAfterMove[j][i] === stateAfterMove[j + 2][i] &&
-          stateAfterMove[j + 1][i] === 0
+          j < stateAfterMove.length - 2
+          && stateAfterMove[j][i] === stateAfterMove[j + 2][i]
+          && stateAfterMove[j + 1][i] === 0
         ) {
           stateAfterMove[j][i] = 2 * stateAfterMove[j][i];
           stateAfterMove[j + 2][i] = 0;
@@ -200,10 +200,10 @@ class Game {
             this.setScore(this.score + stateAfterMove[j][i]);
           }
         } else if (
-          j < stateAfterMove.length - 3 &&
-          stateAfterMove[j][i] === stateAfterMove[j + 3][i] &&
-          stateAfterMove[j + 2][i] === 0 &&
-          stateAfterMove[j + 1][i] === 0
+          j < stateAfterMove.length - 3
+          && stateAfterMove[j][i] === stateAfterMove[j + 3][i]
+          && stateAfterMove[j + 2][i] === 0
+          && stateAfterMove[j + 1][i] === 0
         ) {
           stateAfterMove[j][i] = 2 * stateAfterMove[j][i];
           stateAfterMove[j + 3][i] = 0;
@@ -244,23 +244,23 @@ class Game {
     for (let i = 0; i < stateAfterMove.length; i++) {
       for (let j = stateAfterMove.length - 1; j >= 0; j--) {
         if (
-          j > 0 &&
-          stateAfterMove[j][i] === 0 &&
-          stateAfterMove[j - 1][i] > 0
+          j > 0
+          && stateAfterMove[j][i] === 0
+          && stateAfterMove[j - 1][i] > 0
         ) {
           stateAfterMove[j][i] = stateAfterMove[j - 1][i];
           stateAfterMove[j - 1][i] = 0;
         } else if (
-          j > 1 &&
-          stateAfterMove[j][i] === 0 &&
-          stateAfterMove[j - 2][i] > 0
+          j > 1
+          && stateAfterMove[j][i] === 0
+          && stateAfterMove[j - 2][i] > 0
         ) {
           stateAfterMove[j][i] = stateAfterMove[j - 2][i];
           stateAfterMove[j - 2][i] = 0;
         } else if (
-          j > 2 &&
-          stateAfterMove[j][i] === 0 &&
-          stateAfterMove[j - 3][i] > 0
+          j > 2
+          && stateAfterMove[j][i] === 0
+          && stateAfterMove[j - 3][i] > 0
         ) {
           stateAfterMove[j][i] = stateAfterMove[j - 3][i];
           stateAfterMove[j - 3][i] = 0;
@@ -274,9 +274,9 @@ class Game {
             this.setScore(this.score + stateAfterMove[j][i]);
           }
         } else if (
-          j > 1 &&
-          stateAfterMove[j][i] === stateAfterMove[j - 2][i] &&
-          stateAfterMove[j - 1][i] === 0
+          j > 1
+          && stateAfterMove[j][i] === stateAfterMove[j - 2][i]
+          && stateAfterMove[j - 1][i] === 0
         ) {
           stateAfterMove[j][i] = 2 * stateAfterMove[j][i];
           stateAfterMove[j - 2][i] = 0;
@@ -285,10 +285,10 @@ class Game {
             this.setScore(this.score + stateAfterMove[j][i]);
           }
         } else if (
-          j > 2 &&
-          stateAfterMove[j][i] === stateAfterMove[j - 3][i] &&
-          stateAfterMove[j - 2][i] === 0 &&
-          stateAfterMove[j - 1][i] === 0
+          j > 2
+          && stateAfterMove[j][i] === stateAfterMove[j - 3][i]
+          && stateAfterMove[j - 2][i] === 0
+          && stateAfterMove[j - 1][i] === 0
         ) {
           stateAfterMove[j][i] = 2 * stateAfterMove[j][i];
           stateAfterMove[j - 3][i] = 0;
@@ -347,8 +347,8 @@ class Game {
       const randomColumn = this.getRandomNum(0, 3);
 
       if (this.board[randomRow][randomColumn] === 0) {
-        this.board[randomRow][randomColumn] =
-          chanceArray[this.getRandomNum(0, 9)];
+        this.board[randomRow][randomColumn]
+          = chanceArray[this.getRandomNum(0, 9)];
         count++;
       }
     }
@@ -360,10 +360,10 @@ class Game {
 
   lose() {
     return (
-      this.canMoveLeft() &&
-      this.canMoveRight() &&
-      this.canMoveUp() &&
-      this.canMoveDown()
+      this.canMoveLeft()
+      && this.canMoveRight()
+      && this.canMoveUp()
+      && this.canMoveDown()
     );
   }
 
