@@ -37,7 +37,7 @@ _(Replace with your GitHub Pages / Vercel / Netlify link if deployed)_
 ├── .stylelintrc.js # Stylelint configuration
 ├── .editorconfig # Editor configuration
 ├── package.json # Project metadata and dependencies
-└── README.md # Project documentation```
+└── README.md # Project documentation
 
 ## ⚙️ Installation & Setup
 
