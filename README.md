@@ -17,8 +17,7 @@ _(You can add a screenshot or gif of your game here)_
 
 ## 🚀 Live Demo
 
-👉 [Play the game](https://your-demo-link.com)
-_(Replace with your GitHub Pages / Vercel / Netlify link if deployed)_
+👉 [Play the game](https://saxong.github.io/2048/)
 
 ---
 
