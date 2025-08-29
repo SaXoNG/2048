@@ -43,27 +43,22 @@ _(Replace with your GitHub Pages / Vercel / Netlify link if deployed)_
 
 ## ⚙️ Installation & Setup
 
-1. Clone the repository:
+---
 
-   ```bash
-   git clone https://github.com/your-username/2048.git
-   cd 2048
+## ⚙️ Installation & Setup
 
-   ```
+```bash
+# 1. Clone the repository
+git clone https://github.com/SaXoNG/2048.git
+cd 2048
 
-2. Install dependencies:
-
-```
-
+# 2. Install dependencies
 npm install
-```
 
-3. Run the project in development mode:
-
+# 3. Run the project in development mode
 npm start
 
-4. Build for production:
-
+# 4. Build for production
 npm run build
 
 🎮 How to Play
@@ -103,3 +98,4 @@ npm run lint:css
 
 
 🎮 Enjoy The Game!!!
+```
