@@ -24,7 +24,8 @@ _(Replace with your GitHub Pages / Vercel / Netlify link if deployed)_
 
 ## 📦 Project Structure
 
-```2048/
+```
+2048/
 │── src/
 │ ├── modules/
 │ │ └── Game.class.js # Main Game logic (class-based)
@@ -38,6 +39,7 @@ _(Replace with your GitHub Pages / Vercel / Netlify link if deployed)_
 ├── .editorconfig # Editor configuration
 ├── package.json # Project metadata and dependencies
 └── README.md # Project documentation
+```
 
 ## ⚙️ Installation & Setup
 
