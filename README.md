@@ -9,12 +9,6 @@ The project follows a modular structure with a clean architecture using classes.
 
 ---
 
-## 📷 Preview
-
-_(You can add a screenshot or gif of your game here)_
-
----
-
 ## 🚀 Live Demo
 
 👉 [Play the game](https://saxong.github.io/2048/)
